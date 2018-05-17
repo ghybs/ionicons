@@ -42,7 +42,7 @@ export class IoniconsSite {
   }
 
   componentWillLoad() {
-    return fetch('/data.json').then(rsp => {
+    return fetch('/ionicons/docs/data.json').then(rsp => { // For local development.
 
       rsp.json().then(d => {
         this.data = d;
@@ -87,13 +87,13 @@ export class IoniconsSite {
       <stencil-router>
         <stencil-router-scroll-top>
           <RouterSwitch scrollTopOffset={0}>
-            <stencil-route url="/"
+            <stencil-route url="/ionicons/docs/"
               component="landing-page"
               exact={true}
               componentProps={{'query': this.query, 'data': this.data}}>
 
             </stencil-route>
-            <stencil-route url="/usage"
+            <stencil-route url="/ionicons/docs/usage"
               component="usage-page"
               componentProps={{'data': this.data}}>
 

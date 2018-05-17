@@ -11,7 +11,8 @@ exports.config = {
       type: 'www',
       dir: '../../docs/',
       serviceWorker: false,
-      empty: false
+      empty: false,
+      baseUrl: '/ionicons/docs', // For local development.
     }
   ],
   globalStyle: 'site/global/style.css',
